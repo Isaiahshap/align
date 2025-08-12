@@ -77,15 +77,13 @@ export default function Hero() {
             variants={item}
             className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mb-6"
           >
-            Exclusive Executive Coaching & Immersive Leadership Experiences
-          </motion.h1>
+            Elite Executive Coaching for Leaders Who Refuse to Plateau          </motion.h1>
           
           <motion.p 
             variants={item}
             className="text-lg md:text-xl font-light text-white-dim mb-10 max-w-2xl"
           >
-            Bespoke 1:1 coaching, curated events, and corporate immersions to align success with fulfillment.
-          </motion.p>
+            Bespoke 1:1 coaching, immersive leadership experiences, and high-level networking for entrepreneurs, investors, and high-performing professionals.          </motion.p>
           
           <motion.div variants={item} className="flex flex-wrap gap-4 mb-16">
             <Link 
@@ -128,18 +126,21 @@ export default function Hero() {
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-4 md:gap-6">
-              <div className="stat-pill px-7 py-5 border border-gold-deep/60 bg-gradient-to-br from-black-dark via-black-light to-black-dark shadow-lg flex flex-col items-start min-w-[180px]">
-                <span className="block text-2xl font-semibold gold-text tracking-wide mb-1">425+</span>
-                <span className="block text-sm text-white-dim font-light">Friendships Made</span>
+            <div className="flex gap-10 md:gap-16">
+              <div className="flex flex-col items-center">
+                <span className="block text-3xl gold-text tracking-wide">425+</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Friendships</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Made</span>
               </div>
-              <div className="stat-pill px-7 py-5 border border-gold-deep/60 bg-gradient-to-br from-black-dark via-black-light to-black-dark shadow-lg flex flex-col items-start min-w-[180px]">
-                <span className="block text-2xl font-semibold gold-text tracking-wide mb-1">375+</span>
-                <span className="block text-sm text-white-dim font-light">Professional Partnerships Created</span>
+              <div className="flex flex-col items-center">
+                <span className="block text-3xl gold-text tracking-wide">375+</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Professional Partnerships</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Created</span>
               </div>
-              <div className="stat-pill px-7 py-5 border border-gold-deep/60 bg-gradient-to-br from-black-dark via-black-light to-black-dark shadow-lg flex flex-col items-start min-w-[180px]">
-                <span className="block text-2xl font-semibold gold-text tracking-wide mb-1">95+</span>
-                <span className="block text-sm text-white-dim font-light">Romantic Connections Initiated</span>
+              <div className="flex flex-col items-center">
+                <span className="block text-3xl gold-text tracking-wide">95+</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Romantic Connections</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Initiated</span>
               </div>
             </div>
           </motion.div>

@@ -1,6 +1,17 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
+
+interface Episode {
+  id: string;
+  name: string;
+  description: string;
+  date: string;
+  duration: string;
+  youtubeUrl: string;
+  spotifyUrl: string;
+}
 
 export default function Podcast() {
   const fadeInUp = {
@@ -18,23 +29,42 @@ export default function Podcast() {
     }
   };
 
-  const episodes = [
+  // Hardcoded episodes from the screenshot
+  const episodes: Episode[] = [
     {
-      title: "The Art of Authentic Leadership",
-      guest: "David Chen, CEO of Innovate Partners",
-      description: "Exploring how vulnerability transforms leadership effectiveness and team dynamics."
+      id: "episode-1",
+      name: "Align Experience® Session: Sharpen Your Intuition",
+      description: "Get ready: We're launching the 6th Align Experience® series to get you pumped and prepped for June 7th! This summer event's theme is \"Open, Collaborate, and Receive,\" and each breakout session dives into a unique way to...",
+      date: "Apr 3",
+      duration: "16 min",
+      youtubeUrl: "https://youtube.com/@alignpodcast",
+      spotifyUrl: "https://open.spotify.com/show/2F5FRcKI4GN5XcjIpYTnU2"
     },
     {
-      title: "Wealth Beyond Numbers",
-      guest: "Sarah Williams, Wealth Strategist",
-      description: "Redefining success metrics beyond financial outcomes to create lasting fulfillment."
+      id: "episode-2",
+      name: "Level Up Your Friendships",
+      description: "If you're a #growth-oriented person, you're going to learn, sometimes painfully, that your old #friendships won't be able to keep up or be genuinely happy for you as you reach new levels. You'll also attract new #connections that...",
+      date: "Mar 26",
+      duration: "57 min",
+      youtubeUrl: "https://youtube.com/@alignpodcast",
+      spotifyUrl: "https://open.spotify.com/show/2F5FRcKI4GN5XcjIpYTnU2"
     },
     {
-      title: "Conscious Capital: The Future of Investing",
-      guest: "Michael Rodriguez, Impact Investor",
-      description: "How aligned investments create both financial returns and meaningful change."
+      id: "episode-3",
+      name: "Align Experience™: Eliminate Doubts & Manifest Your Desires",
+      description: "We're back for an encore 🎉 Apply to join the upcoming Align Experience™, an extraordinary, immersive event designed to empower you to become your best self while fostering meaningful connections. Prepare to laugh, gro...",
+      date: "Mar 19",
+      duration: "13 min",
+      youtubeUrl: "https://youtube.com/@alignpodcast",
+      spotifyUrl: "https://open.spotify.com/show/2F5FRcKI4GN5XcjIpYTnU2"
     }
   ];
+
+  // Function to truncate description text
+  const truncateDescription = (text: string, maxLength = 120) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trim() + '...';
+  };
 
   return (
     <section id="podcast" className="py-20 bg-black-light">
@@ -65,32 +95,47 @@ export default function Podcast() {
         >
           {episodes.map((episode, index) => (
             <motion.div
-              key={index}
+              key={episode.id}
               variants={fadeInUp}
               className={`bg-black-dark border border-gold-deep/20 p-6 rounded-sm ${
                 index === 0 ? "md:col-span-3 lg:col-span-1 lg:row-span-2" : ""
               }`}
             >
               {index === 0 && <div className="text-xs text-gold-deep mb-2">LATEST EPISODE</div>}
-              <h3 className="text-lg font-light mb-2 gold-text">{episode.title}</h3>
-              <p className="text-white-dim text-sm mb-4">with {episode.guest}</p>
-              <p className="text-white-dimmer text-sm mb-6">{episode.description}</p>
-              <Link 
-                href="/podcast"
-                className="text-gold-deep hover:text-gold-light text-sm transition-colors inline-flex items-center"
-              >
-                Listen Now
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+              <h3 className="text-lg font-light mb-2 gold-text">{episode.name}</h3>
+              <p className="text-white-dim text-xs mb-2">{episode.date} • {episode.duration}</p>
+              <p className="text-white-dimmer text-sm mb-6">{truncateDescription(episode.description)}</p>
+              <div className="flex space-x-4">
+                <a 
+                  href={episode.spotifyUrl}
+                  className="text-gold-deep hover:text-gold-light text-sm transition-colors inline-flex items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.36.12-.75-.12-.87-.479-.12-.359.12-.75.48-.87 4.56-1.021 8.52-.6 11.64 1.32.42.18.48.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                  </svg>
+                  Spotify
+                </a>
+                <a 
+                  href={episode.youtubeUrl}
+                  className="text-gold-deep hover:text-gold-light text-sm transition-colors inline-flex items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                  </svg>
+                  YouTube
+                </a>
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-6">
           <a 
-            href="https://youtube.com" 
+            href="https://youtube.com/@alignpodcast" 
             className="btn-secondary px-6 py-3 inline-flex items-center"
             target="_blank"
             rel="noopener noreferrer"
@@ -101,7 +146,7 @@ export default function Podcast() {
             Listen on YouTube
           </a>
           <a 
-            href="https://spotify.com" 
+            href="https://open.spotify.com/show/2F5FRcKI4GN5XcjIpYTnU2" 
             className="btn-secondary px-6 py-3 inline-flex items-center"
             target="_blank"
             rel="noopener noreferrer"

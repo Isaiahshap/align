@@ -66,18 +66,21 @@ export default function Events() {
               individuals ready to forge meaningful connections and experience profound transformation.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
-              <div className="stat-pill px-5 py-3 rounded-full">
-                <span className="block text-lg font-light gold-text">425+</span>
-                <span className="block text-xs text-white-dim">Friendships</span>
+            <div className="flex gap-10 md:gap-16 mb-8">
+              <div className="flex flex-col items-center">
+                <span className="block text-2xl gold-text tracking-wide">425+</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Friendships</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Made</span>
               </div>
-              <div className="stat-pill px-5 py-3 rounded-full">
-                <span className="block text-lg font-light gold-text">375+</span>
-                <span className="block text-xs text-white-dim">Professional Partnerships</span>
+              <div className="flex flex-col items-center">
+                <span className="block text-2xl gold-text tracking-wide">375+</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Professional Partnerships</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Created</span>
               </div>
-              <div className="stat-pill px-5 py-3 rounded-full">
-                <span className="block text-lg font-light gold-text">95+</span>
-                <span className="block text-xs text-white-dim">Romantic Connections</span>
+              <div className="flex flex-col items-center">
+                <span className="block text-2xl gold-text tracking-wide">95+</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Romantic Connections</span>
+                <span className="block text-xs uppercase tracking-wider text-white-dim mt-1">Initiated</span>
               </div>
             </div>
 

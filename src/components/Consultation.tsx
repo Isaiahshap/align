@@ -76,7 +76,7 @@ export default function Consultation() {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
+                  className="w-full px-4 py-3 bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
                 />
               </div>
               
@@ -91,7 +91,7 @@ export default function Consultation() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
+                  className="w-full px-4 py-3 bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
                 />
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function Consultation() {
                 value={formData.linkedin}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-xl bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
+                className="w-full px-4 py-3 bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
               />
             </div>
 
@@ -121,7 +121,7 @@ export default function Consultation() {
                 name="availability"
                 value={formData.availability}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
+                className="w-full px-4 py-3 bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
                 placeholder="e.g., Weekdays after 3pm ET, Tuesdays all day"
               />
             </div>
@@ -136,7 +136,7 @@ export default function Consultation() {
                 value={formData.helpNeeded}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-xl bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold resize-none"
+                className="w-full px-4 py-3 bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold resize-none"
               ></textarea>
             </div>
 
@@ -154,7 +154,7 @@ export default function Consultation() {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
+                    className="w-full px-4 py-3 bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
                   />
                 </div>
                 
@@ -168,7 +168,7 @@ export default function Consultation() {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
+                    className="w-full px-4 py-3 bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
                   />
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function Consultation() {
                   name="emailVIP"
                   value={formData.emailVIP}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
+                  className="w-full px-4 py-3 bg-black-light border border-gold-deep/30 text-off-white focus:border-gold-light focus:shadow-gold"
                 />
               </div>
 

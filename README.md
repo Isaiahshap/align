@@ -2,6 +2,22 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Environment Variables
+
+This project uses the Spotify Web API to fetch podcast episodes. You'll need to set up the following environment variables in a `.env.local` file:
+
+```
+NEXT_PUBLIC_SPOTIFY_CLIENT_ID=your_spotify_client_id
+NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+```
+
+To get these credentials:
+1. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)
+2. Create a new application
+3. Copy the Client ID and Client Secret to your `.env.local` file
+
+### Development Server
+
 First, run the development server:
 
 ```bash
